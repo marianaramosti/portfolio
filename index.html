@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mariana Ramos | ADS e Gestão de Projetos</title>
+  <meta name="description" content="Portfólio de Mariana da Silva Ramos: Análise e Desenvolvimento de Sistemas, gestão administrativa e projetos.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO / NAVEGAÇÃO ===== -->
+  <header class="topo">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">MR<span>.</span></a>
+
+      <!-- Botão que abre o menu no celular -->
+      <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="menu" id="menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <button class="tema-botao" id="temaBotao" aria-label="Alternar tema claro/escuro">◐</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== APRESENTAÇÃO ===== -->
+    <section class="hero container" id="inicio">
+      <p class="hero-saudacao">Olá, eu sou</p>
+      <h1>Mariana da Silva Ramos</h1>
+      <p class="hero-cargo">Análise e Desenvolvimento de Sistemas <span>|</span> Gestão Administrativa e de Projetos</p>
+      <p class="hero-texto">
+        Uno tecnologia e gestão: desenvolvo soluções web e trago 9 anos de experiência
+        organizando processos, projetos e rotinas financeiras.
+      </p>
+      <p class="hero-local">📍 Campina Grande/PB · Remoto ou híbrido · Disponibilidade imediata</p>
+      <div class="hero-botoes">
+        <a href="#projetos" class="botao botao-principal">Ver projetos</a>
+        <a href="#contato" class="botao botao-secundario">Fale comigo</a>
+      </div>
+    </section>
+
+    <!-- ===== NÚMEROS ===== -->
+    <section class="numeros container" aria-label="Números de destaque">
+      <div class="numero"><strong>~80</strong><span>projetos acompanhados por ano</span></div>
+      <div class="numero"><strong>19</strong><span>APAEs assessoradas na Paraíba</span></div>
+      <div class="numero"><strong>~60</strong><span>pagamentos controlados por mês</span></div>
+      <div class="numero"><strong>9</strong><span>anos de experiência profissional</span></div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section class="secao container" id="sobre">
+      <h2>Sobre mim</h2>
+      <div class="sobre-texto">
+        <p>
+          Sou formada em Administração pela UEPB e em Análise e Desenvolvimento de Sistemas.
+          Atualmente curso o MBA em Gestão de Projetos e a graduação em Ciências Contábeis.
+        </p>
+        <p>
+          Atuo como Gerente Administrativa e de Projetos no terceiro setor, onde acompanho
+          projetos, prestação de contas, contratos e captação de recursos. No dia a dia,
+          uso dados e tecnologia para organizar informações e apoiar decisões.
+        </p>
+        <p>
+          Hoje busco oportunidades em tecnologia, especialmente onde desenvolvimento,
+          dados e processos de negócio se encontram.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="secao container" id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="cards-habilidades">
+        <article class="card">
+          <h3>Desenvolvimento</h3>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li>
+            <li>Python</li><li>SQL</li><li>Git</li>
+          </ul>
+          <p class="nivel">Nível intermediário</p>
+        </article>
+        <article class="card">
+          <h3>Dados e sistemas</h3>
+          <ul class="tags">
+            <li>Power BI</li><li>Excel</li><li>TOTVS</li><li>Transferegov</li><li>Trello</li>
+          </ul>
+          <p class="nivel">Power BI e TOTVS em nível básico</p>
+        </article>
+        <article class="card">
+          <h3>Gestão</h3>
+          <ul class="tags">
+            <li>Gestão de projetos</li><li>Scrum</li><li>Prestação de contas</li>
+            <li>Captação de recursos</li><li>Contratos</li><li>Processos</li>
+          </ul>
+          <p class="nivel">Scrum Fundamentals Certified (SFC)</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="secao container" id="projetos">
+      <h2>Projetos</h2>
+
+      <!-- Filtros: o JavaScript mostra/esconde os cards pela categoria -->
+      <div class="filtros" role="group" aria-label="Filtrar projetos">
+        <button class="filtro ativo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="web">Web</button>
+        <button class="filtro" data-filtro="dados">Dados</button>
+      </div>
+
+      <div class="cards-projetos">
+        <article class="card projeto" data-categoria="web">
+          <span class="status status-pronto">Publicado</span>
+          <h3>Portfólio pessoal</h3>
+          <p>Este site. Layout responsivo, tema claro/escuro e filtro de projetos, sem bibliotecas externas.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <a href="https://github.com/marianaramosti/portfolio" class="link-projeto" target="_blank" rel="noopener">Ver código →</a>
+        </article>
+
+        <article class="card projeto" data-categoria="web">
+          <span class="status status-andamento">Em desenvolvimento</span>
+          <h3>Controle Financeiro</h3>
+          <p>Sistema de contas a pagar e cobranças com login, cadastros, filtros e relatório mensal.</p>
+          <ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+        </article>
+
+        <article class="card projeto" data-categoria="web">
+          <span class="status status-andamento">Em desenvolvimento</span>
+          <h3>Gestor de Projetos e Convênios</h3>
+          <p>Acompanhamento de projetos, prazos, orçamentos, fornecedores e prestação de contas.</p>
+          <ul class="tags"><li>PHP</li><li>SQL</li><li>JavaScript</li></ul>
+        </article>
+
+        <article class="card projeto" data-categoria="dados">
+          <span class="status status-andamento">Em desenvolvimento</span>
+          <h3>Análise de Emendas Parlamentares</h3>
+          <p>Análise de dados públicos de transferências do governo, com gráficos e conclusões.</p>
+          <ul class="tags"><li>Python</li><li>SQL</li><li>pandas</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIÊNCIA ===== -->
+    <section class="secao container" id="experiencia">
+      <h2>Experiência</h2>
+      <ol class="linha-tempo">
+        <li>
+          <span class="periodo">01/2022 – atual</span>
+          <h3>Gerente Administrativa e Apoio a Projetos</h3>
+          <p class="empresa">FEAPAES PB · Campina Grande/PB</p>
+          <ul>
+            <li>Acompanhamento administrativo e operacional de cerca de 80 projetos por ano.</li>
+            <li>Assessoria a 19 APAEs da Paraíba em rotinas administrativas, financeiras e de projetos.</li>
+            <li>Captação via emendas parlamentares no Transferegov; Olimpíadas e Festival de Artes das APAEs.</li>
+            <li>Contratos, regularização documental e dashboards em Power BI.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="periodo">02/2025 – atual</span>
+          <h3>Assessoria Administrativa e Financeira (freelancer)</h3>
+          <p class="empresa">Lagos &amp; Manren Advocacia</p>
+          <ul>
+            <li>Controle de cerca de 60 pagamentos mensais, cobranças e conferência de valores.</li>
+          </ul>
+        </li>
+        <li>
+          <span class="periodo">06/2019 – 12/2021</span>
+          <h3>Gerente de RH</h3>
+          <p class="empresa">APAE Campina Grande</p>
+        </li>
+        <li>
+          <span class="periodo">04/2018 – 05/2019</span>
+          <h3>Assistente Administrativa</h3>
+          <p class="empresa">APAE Campina Grande</p>
+        </li>
+        <li>
+          <span class="periodo">03/2017 – 03/2018</span>
+          <h3>Assistente de Licitação</h3>
+          <p class="empresa">Prefeitura Municipal de Campina Grande</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== FORMAÇÃO ===== -->
+    <section class="secao container" id="formacao">
+      <h2>Formação</h2>
+      <div class="cards-formacao">
+        <div class="card"><h3>Análise e Desenvolvimento de Sistemas</h3><p>Cruzeiro do Sul / UNIPÊ · 2023</p></div>
+        <div class="card"><h3>Administração de Empresas</h3><p>UEPB · 2016</p></div>
+        <div class="card"><h3>MBA em Gestão de Projetos</h3><p>Faculdade Líbano · em andamento</p></div>
+        <div class="card"><h3>Ciências Contábeis</h3><p>Unicesumar · em andamento</p></div>
+        <div class="card"><h3>Pós-graduação em Gestão de RH</h3><p>2021</p></div>
+        <div class="card"><h3>Scrum Fundamentals Certified</h3><p>SCRUMstudy · 2023</p></div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="secao container contato" id="contato">
+      <h2>Contato</h2>
+      <p>Aberta a oportunidades em tecnologia, projetos e áreas administrativas.</p>
+      <div class="contato-links">
+        <a href="mailto:marianaramos.ti@gmail.com" class="botao botao-principal">marianaramos.ti@gmail.com</a>
+        <a href="https://github.com/marianaramosti" class="botao botao-secundario" target="_blank" rel="noopener">GitHub</a>
+        <!-- Quando tiver o link do LinkedIn, troque o endereço abaixo e apague este comentário -->
+        <a href="https://www.linkedin.com/in/SEU-PERFIL" class="botao botao-secundario" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© <span id="ano"></span> Mariana da Silva Ramos · Feito com HTML, CSS e JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
