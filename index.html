@@ -3,162 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mariana Ramos | ADS e Gestão de Projetos</title>
-  <meta name="description" content="Portfólio de Mariana da Silva Ramos: Análise e Desenvolvimento de Sistemas, gestão administrativa e projetos.">
+  <title>Mariana Ramos | Desenvolvimento Web e Gestão de Projetos</title>
+  <meta name="description" content="Portfólio de Mariana da Silva Ramos: tecnóloga em Análise e Desenvolvimento de Sistemas, com experiência em gestão administrativa e de projetos.">
+
+  <!-- Fonte (Google Fonts) e ícones das tecnologias (Devicon) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== CABEÇALHO / NAVEGAÇÃO ===== -->
-  <header class="topo">
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="topo" id="topo">
     <nav class="nav container">
-      <a href="#inicio" class="logo">MR<span>.</span></a>
+      <a href="#inicio" class="logo">&lt;Mariana<span>/&gt;</span></a>
 
-      <!-- Botão que abre o menu no celular -->
       <button class="menu-botao" id="menuBotao" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
       <ul class="menu" id="menu">
+        <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li>
-          <button class="tema-botao" id="temaBotao" aria-label="Alternar tema claro/escuro">◐</button>
-        </li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#contato" class="menu-destaque">Contato</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- ===== APRESENTAÇÃO ===== -->
+    <!-- ================= APRESENTAÇÃO ================= -->
     <section class="hero container" id="inicio">
-      <p class="hero-saudacao">Olá, eu sou</p>
-      <h1>Mariana da Silva Ramos</h1>
-      <p class="hero-cargo">Análise e Desenvolvimento de Sistemas <span>|</span> Gestão Administrativa e de Projetos</p>
-      <p class="hero-texto">
-        Uno tecnologia e gestão: desenvolvo soluções web e trago 9 anos de experiência
-        organizando processos, projetos e rotinas financeiras.
-      </p>
-      <p class="hero-local">📍 Campina Grande/PB · Remoto ou híbrido · Disponibilidade imediata</p>
-      <div class="hero-botoes">
-        <a href="#projetos" class="botao botao-principal">Ver projetos</a>
-        <a href="#contato" class="botao botao-secundario">Fale comigo</a>
+      <div class="hero-texto">
+        <p class="hero-oi">👋 Olá, eu sou</p>
+        <h1>Mariana <span class="gradiente">Ramos</span></h1>
+        <p class="hero-digitando">
+          <span id="digitando"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-descricao">
+          Tecnóloga em Análise e Desenvolvimento de Sistemas e administradora.
+          Uno código e gestão para criar soluções que organizam processos e apoiam decisões.
+        </p>
+
+        <div class="hero-botoes">
+          <!-- Só aparece se o arquivo curriculo.pdf existir no repositório (ver script.js) -->
+          <a href="curriculo.pdf" class="botao botao-principal" id="botaoCV" download hidden>⬇ Baixar CV</a>
+          <a href="#projetos" class="botao botao-principal" id="botaoProjetos">Ver projetos</a>
+          <a href="#contato" class="botao botao-contorno">Fale comigo</a>
+        </div>
+
+        <ul class="sociais" aria-label="Redes">
+          <li><a href="https://github.com/marianaramosti" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/mariana-ramos-9b3014151/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
+          <li><a href="mailto:marianaramos.ti@gmail.com" aria-label="E-mail">✉</a></li>
+        </ul>
       </div>
+
+      <div class="hero-foto">
+        <!-- Para usar sua foto: envie um arquivo chamado foto.jpg para o repositório -->
+        <div class="avatar" id="avatar"><span>MR</span></div>
+        <div class="selo selo-1">💻 Desenvolvimento Web</div>
+        <div class="selo selo-2">📊 Dados e Projetos</div>
+      </div>
+
+      <a href="#sobre" class="rolar" aria-label="Rolar para baixo">
+        <span class="rolar-mouse"></span>
+        Role para baixo
+      </a>
     </section>
 
-    <!-- ===== NÚMEROS ===== -->
-    <section class="numeros container" aria-label="Números de destaque">
-      <div class="numero"><strong>~80</strong><span>projetos acompanhados por ano</span></div>
-      <div class="numero"><strong>19</strong><span>APAEs assessoradas na Paraíba</span></div>
-      <div class="numero"><strong>~60</strong><span>pagamentos controlados por mês</span></div>
-      <div class="numero"><strong>9</strong><span>anos de experiência profissional</span></div>
-    </section>
-
-    <!-- ===== SOBRE ===== -->
+    <!-- ================= SOBRE ================= -->
     <section class="secao container" id="sobre">
-      <h2>Sobre mim</h2>
-      <div class="sobre-texto">
-        <p>
-          Sou formada em Administração pela UEPB e em Análise e Desenvolvimento de Sistemas.
-          Atualmente curso o MBA em Gestão de Projetos e a graduação em Ciências Contábeis.
-        </p>
-        <p>
-          Atuo como Gerente Administrativa e de Projetos no terceiro setor, onde acompanho
-          projetos, prestação de contas, contratos e captação de recursos. No dia a dia,
-          uso dados e tecnologia para organizar informações e apoiar decisões.
-        </p>
-        <p>
-          Hoje busco oportunidades em tecnologia, especialmente onde desenvolvimento,
-          dados e processos de negócio se encontram.
-        </p>
+      <p class="secao-pre">Conheça um pouco</p>
+      <h2>Sobre <span class="gradiente">mim</span></h2>
+
+      <div class="sobre-grade">
+        <div class="sobre-texto">
+          <p>
+            Sou formada em <strong>Administração</strong> pela UEPB e em
+            <strong>Análise e Desenvolvimento de Sistemas</strong>. Atualmente curso o
+            MBA em Gestão de Projetos e a graduação em Ciências Contábeis.
+          </p>
+          <p>
+            Atuo como Gerente Administrativa e de Projetos no terceiro setor, acompanhando
+            projetos, prestação de contas, contratos e captação de recursos, e uso dados e
+            tecnologia para organizar informações e apoiar decisões.
+          </p>
+          <p>
+            Busco oportunidades em tecnologia, especialmente onde desenvolvimento,
+            dados e processos de negócio se encontram.
+          </p>
+        </div>
+
+        <div class="numeros">
+          <div class="numero"><strong data-contar="80">0</strong><span>projetos por ano (aprox.)</span></div>
+          <div class="numero"><strong data-contar="19">0</strong><span>APAEs assessoradas na PB</span></div>
+          <div class="numero"><strong data-contar="60">0</strong><span>pagamentos por mês (aprox.)</span></div>
+          <div class="numero"><strong data-contar="9">0</strong><span>anos de experiência profissional</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- ===== HABILIDADES ===== -->
+    <!-- ================= HABILIDADES ================= -->
     <section class="secao container" id="habilidades">
-      <h2>Habilidades</h2>
-      <div class="cards-habilidades">
-        <article class="card">
-          <h3>Desenvolvimento</h3>
-          <ul class="tags">
-            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li>
-            <li>Python</li><li>SQL</li><li>Git</li>
+      <p class="secao-pre">O que eu uso</p>
+      <h2>Minhas <span class="gradiente">habilidades</span></h2>
+
+      <div class="habilidades-grade">
+        <article class="cartao">
+          <h3>Front-end</h3>
+          <ul class="icones">
+            <li><i class="devicon-html5-plain colored"></i>HTML</li>
+            <li><i class="devicon-css3-plain colored"></i>CSS</li>
+            <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
           </ul>
-          <p class="nivel">Nível intermediário</p>
         </article>
-        <article class="card">
-          <h3>Dados e sistemas</h3>
-          <ul class="tags">
+        <article class="cartao">
+          <h3>Back-end e dados</h3>
+          <ul class="icones">
+            <li><i class="devicon-php-plain colored"></i>PHP</li>
+            <li><i class="devicon-python-plain colored"></i>Python</li>
+            <li><i class="devicon-mysql-original colored"></i>SQL</li>
+            <li><i class="devicon-git-plain colored"></i>Git</li>
+          </ul>
+        </article>
+        <article class="cartao">
+          <h3>Ferramentas e gestão</h3>
+          <ul class="chips">
             <li>Power BI</li><li>Excel</li><li>TOTVS</li><li>Transferegov</li><li>Trello</li>
+            <li>Scrum (SFC)</li><li>Gestão de projetos</li><li>Prestação de contas</li><li>Contratos</li>
           </ul>
-          <p class="nivel">Power BI e TOTVS em nível básico</p>
-        </article>
-        <article class="card">
-          <h3>Gestão</h3>
-          <ul class="tags">
-            <li>Gestão de projetos</li><li>Scrum</li><li>Prestação de contas</li>
-            <li>Captação de recursos</li><li>Contratos</li><li>Processos</li>
-          </ul>
-          <p class="nivel">Scrum Fundamentals Certified (SFC)</p>
         </article>
       </div>
+      <p class="nota">HTML, CSS, JavaScript, PHP, Python, SQL e Git em nível intermediário · Power BI e TOTVS em nível básico</p>
     </section>
 
-    <!-- ===== PROJETOS ===== -->
+    <!-- ================= PROJETOS ================= -->
     <section class="secao container" id="projetos">
-      <h2>Projetos</h2>
+      <p class="secao-pre">O que eu construí</p>
+      <h2>Meus <span class="gradiente">projetos</span></h2>
 
-      <!-- Filtros: o JavaScript mostra/esconde os cards pela categoria -->
       <div class="filtros" role="group" aria-label="Filtrar projetos">
         <button class="filtro ativo" data-filtro="todos">Todos</button>
         <button class="filtro" data-filtro="web">Web</button>
         <button class="filtro" data-filtro="dados">Dados</button>
       </div>
 
-      <div class="cards-projetos">
-        <article class="card projeto" data-categoria="web">
-          <span class="status status-pronto">Publicado</span>
-          <h3>Portfólio pessoal</h3>
-          <p>Este site. Layout responsivo, tema claro/escuro e filtro de projetos, sem bibliotecas externas.</p>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <a href="https://github.com/marianaramosti/portfolio" class="link-projeto" target="_blank" rel="noopener">Ver código →</a>
+      <div class="projetos-grade">
+        <article class="projeto" data-categoria="web">
+          <div class="projeto-capa capa-roxa"><span>&lt;/&gt;</span></div>
+          <div class="projeto-corpo">
+            <span class="status pronto">Publicado</span>
+            <h3>Portfólio pessoal</h3>
+            <p>Este site: responsivo, com efeito de digitação, contadores animados e filtro de projetos, sem frameworks.</p>
+            <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <div class="projeto-links">
+              <a href="https://github.com/marianaramosti/portfolio" target="_blank" rel="noopener" class="botao-mini">GitHub</a>
+              <a href="https://marianaramosti.github.io/portfolio" target="_blank" rel="noopener" class="botao-mini botao-mini-cheio">Demo</a>
+            </div>
+          </div>
         </article>
 
-        <article class="card projeto" data-categoria="web">
-          <span class="status status-andamento">Em desenvolvimento</span>
-          <h3>Controle Financeiro</h3>
-          <p>Sistema de contas a pagar e cobranças com login, cadastros, filtros e relatório mensal.</p>
-          <ul class="tags"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+        <article class="projeto" data-categoria="web">
+          <div class="projeto-capa capa-verde"><span>R$</span></div>
+          <div class="projeto-corpo">
+            <span class="status andamento">Em desenvolvimento</span>
+            <h3>Controle Financeiro</h3>
+            <p>Sistema de contas a pagar e cobranças com login, cadastros, filtros e relatório mensal.</p>
+            <ul class="chips"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
+            <div class="projeto-links"><span class="em-breve">Em breve</span></div>
+          </div>
         </article>
 
-        <article class="card projeto" data-categoria="web">
-          <span class="status status-andamento">Em desenvolvimento</span>
-          <h3>Gestor de Projetos e Convênios</h3>
-          <p>Acompanhamento de projetos, prazos, orçamentos, fornecedores e prestação de contas.</p>
-          <ul class="tags"><li>PHP</li><li>SQL</li><li>JavaScript</li></ul>
+        <article class="projeto" data-categoria="web">
+          <div class="projeto-capa capa-azul"><span>✓</span></div>
+          <div class="projeto-corpo">
+            <span class="status andamento">Em desenvolvimento</span>
+            <h3>Gestor de Projetos e Convênios</h3>
+            <p>Acompanhamento de projetos, prazos, orçamentos, fornecedores e prestação de contas.</p>
+            <ul class="chips"><li>PHP</li><li>SQL</li><li>JavaScript</li></ul>
+            <div class="projeto-links"><span class="em-breve">Em breve</span></div>
+          </div>
         </article>
 
-        <article class="card projeto" data-categoria="dados">
-          <span class="status status-andamento">Em desenvolvimento</span>
-          <h3>Análise de Emendas Parlamentares</h3>
-          <p>Análise de dados públicos de transferências do governo, com gráficos e conclusões.</p>
-          <ul class="tags"><li>Python</li><li>SQL</li><li>pandas</li></ul>
+        <article class="projeto" data-categoria="dados">
+          <div class="projeto-capa capa-laranja"><span>📊</span></div>
+          <div class="projeto-corpo">
+            <span class="status andamento">Em desenvolvimento</span>
+            <h3>Análise de Emendas Parlamentares</h3>
+            <p>Análise de dados públicos de transferências do governo, com gráficos e conclusões.</p>
+            <ul class="chips"><li>Python</li><li>SQL</li><li>pandas</li></ul>
+            <div class="projeto-links"><span class="em-breve">Em breve</span></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- ===== EXPERIÊNCIA ===== -->
-    <section class="secao container" id="experiencia">
-      <h2>Experiência</h2>
-      <ol class="linha-tempo">
+    <!-- ================= SERVIÇOS ================= -->
+    <section class="secao container" id="servicos">
+      <p class="secao-pre">Como posso ajudar</p>
+      <h2>O que eu <span class="gradiente">faço</span></h2>
+
+      <div class="servicos-grade">
+        <article class="cartao servico">
+          <div class="servico-icone">💻</div>
+          <h3>Desenvolvimento web</h3>
+          <p>Sites e sistemas web com HTML, CSS, JavaScript, PHP e banco de dados SQL.</p>
+        </article>
+        <article class="cartao servico">
+          <div class="servico-icone">📊</div>
+          <h3>Dados e relatórios</h3>
+          <p>Planilhas de controle, indicadores e dashboards para apoiar a tomada de decisão.</p>
+        </article>
+        <article class="cartao servico">
+          <div class="servico-icone">🗂️</div>
+          <h3>Gestão de projetos</h3>
+          <p>Planejamento, cronogramas, acompanhamento de prazos e prestação de contas.</p>
+        </article>
+        <article class="cartao servico">
+          <div class="servico-icone">⚙️</div>
+          <h3>Processos administrativos</h3>
+          <p>Organização de rotinas, documentos, contratos e controles financeiros.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= TRAJETÓRIA ================= -->
+    <section class="secao container" id="trajetoria">
+      <p class="secao-pre">Minha caminhada</p>
+      <h2>Minha <span class="gradiente">trajetória</span></h2>
+
+      <div class="abas" role="tablist">
+        <button class="aba ativa" data-aba="experiencia" role="tab">Experiência</button>
+        <button class="aba" data-aba="formacao" role="tab">Formação</button>
+      </div>
+
+      <ol class="linha-tempo painel ativo" id="experiencia">
         <li>
           <span class="periodo">01/2022 – atual</span>
           <h3>Gerente Administrativa e Apoio a Projetos</h3>
-          <p class="empresa">FEAPAES PB · Campina Grande/PB</p>
+          <p class="local">FEAPAES PB · Campina Grande/PB</p>
           <ul>
             <li>Acompanhamento administrativo e operacional de cerca de 80 projetos por ano.</li>
             <li>Assessoria a 19 APAEs da Paraíba em rotinas administrativas, financeiras e de projetos.</li>
@@ -169,58 +259,83 @@
         <li>
           <span class="periodo">02/2025 – atual</span>
           <h3>Assessoria Administrativa e Financeira (freelancer)</h3>
-          <p class="empresa">Lagos &amp; Manren Advocacia</p>
-          <ul>
-            <li>Controle de cerca de 60 pagamentos mensais, cobranças e conferência de valores.</li>
-          </ul>
+          <p class="local">Lagos &amp; Manren Advocacia</p>
+          <ul><li>Controle de cerca de 60 pagamentos mensais, cobranças e conferência de valores.</li></ul>
         </li>
         <li>
           <span class="periodo">06/2019 – 12/2021</span>
           <h3>Gerente de RH</h3>
-          <p class="empresa">APAE Campina Grande</p>
+          <p class="local">APAE Campina Grande</p>
         </li>
         <li>
           <span class="periodo">04/2018 – 05/2019</span>
           <h3>Assistente Administrativa</h3>
-          <p class="empresa">APAE Campina Grande</p>
+          <p class="local">APAE Campina Grande</p>
         </li>
         <li>
           <span class="periodo">03/2017 – 03/2018</span>
           <h3>Assistente de Licitação</h3>
-          <p class="empresa">Prefeitura Municipal de Campina Grande</p>
+          <p class="local">Prefeitura Municipal de Campina Grande</p>
         </li>
+      </ol>
+
+      <ol class="linha-tempo painel" id="formacao">
+        <li><span class="periodo">2023</span><h3>Análise e Desenvolvimento de Sistemas</h3><p class="local">Cruzeiro do Sul / UNIPÊ</p></li>
+        <li><span class="periodo">2016</span><h3>Administração de Empresas</h3><p class="local">UEPB</p></li>
+        <li><span class="periodo">Em andamento</span><h3>MBA em Gestão de Projetos</h3><p class="local">Faculdade Líbano</p></li>
+        <li><span class="periodo">Em andamento</span><h3>Ciências Contábeis</h3><p class="local">Unicesumar</p></li>
+        <li><span class="periodo">2021</span><h3>Pós-graduação em Gestão de RH</h3></li>
+        <li><span class="periodo">2023</span><h3>Scrum Fundamentals Certified (SFC)</h3><p class="local">SCRUMstudy</p></li>
       </ol>
     </section>
 
-    <!-- ===== FORMAÇÃO ===== -->
-    <section class="secao container" id="formacao">
-      <h2>Formação</h2>
-      <div class="cards-formacao">
-        <div class="card"><h3>Análise e Desenvolvimento de Sistemas</h3><p>Cruzeiro do Sul / UNIPÊ · 2023</p></div>
-        <div class="card"><h3>Administração de Empresas</h3><p>UEPB · 2016</p></div>
-        <div class="card"><h3>MBA em Gestão de Projetos</h3><p>Faculdade Líbano · em andamento</p></div>
-        <div class="card"><h3>Ciências Contábeis</h3><p>Unicesumar · em andamento</p></div>
-        <div class="card"><h3>Pós-graduação em Gestão de RH</h3><p>2021</p></div>
-        <div class="card"><h3>Scrum Fundamentals Certified</h3><p>SCRUMstudy · 2023</p></div>
-      </div>
-    </section>
+    <!-- ================= CONTATO ================= -->
+    <section class="secao container" id="contato">
+      <p class="secao-pre">Vamos conversar?</p>
+      <h2>Entre em <span class="gradiente">contato</span></h2>
+      <p class="contato-intro">Disponibilidade imediata · Campina Grande/PB · Remoto ou híbrido · CLT ou PJ</p>
 
-    <!-- ===== CONTATO ===== -->
-    <section class="secao container contato" id="contato">
-      <h2>Contato</h2>
-      <p>Aberta a oportunidades em tecnologia, projetos e áreas administrativas.</p>
-      <div class="contato-links">
-        <a href="mailto:marianaramos.ti@gmail.com" class="botao botao-principal">marianaramos.ti@gmail.com</a>
-        <a href="https://github.com/marianaramosti" class="botao botao-secundario" target="_blank" rel="noopener">GitHub</a>
-        <!-- Quando tiver o link do LinkedIn, troque o endereço abaixo e apague este comentário -->
-        <a href="https://www.linkedin.com/in/SEU-PERFIL" class="botao botao-secundario" target="_blank" rel="noopener">LinkedIn</a>
+      <div class="contato-grade">
+        <a class="cartao contato-cartao" href="mailto:marianaramos.ti@gmail.com">
+          <span class="contato-icone">✉</span>
+          <strong>E-mail</strong>
+          <span>marianaramos.ti@gmail.com</span>
+        </a>
+        <!-- WhatsApp: se não quiser o número público, apague este bloco inteiro -->
+        <a class="cartao contato-cartao" href="https://wa.me/5583991285775" target="_blank" rel="noopener">
+          <span class="contato-icone">💬</span>
+          <strong>WhatsApp</strong>
+          <span>(83) 99128-5775</span>
+        </a>
+        <a class="cartao contato-cartao" href="https://www.linkedin.com/in/mariana-ramos-9b3014151/" target="_blank" rel="noopener">
+          <span class="contato-icone"><i class="devicon-linkedin-plain"></i></span>
+          <strong>LinkedIn</strong>
+          <span>mariana-ramos</span>
+        </a>
+        <a class="cartao contato-cartao" href="https://github.com/marianaramosti" target="_blank" rel="noopener">
+          <span class="contato-icone"><i class="devicon-github-original"></i></span>
+          <strong>GitHub</strong>
+          <span>@marianaramosti</span>
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- ================= RODAPÉ ================= -->
   <footer class="rodape">
-    <p>© <span id="ano"></span> Mariana da Silva Ramos · Feito com HTML, CSS e JavaScript</p>
+    <div class="container rodape-conteudo">
+      <a href="#inicio" class="logo">&lt;Mariana<span>/&gt;</span></a>
+      <ul class="rodape-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <p>© <span id="ano"></span> Mariana da Silva Ramos · Feito com HTML, CSS e JavaScript</p>
+    </div>
   </footer>
+
+  <a href="#inicio" class="voltar-topo" id="voltarTopo" aria-label="Voltar ao topo">↑</a>
 
   <script src="script.js"></script>
 </body>
