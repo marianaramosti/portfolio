@@ -31,8 +31,4 @@ portfolio/
 
 Basta abrir o arquivo `index.html` no navegador. Não precisa instalar nada.
 
-## Próximos passos
 
-- [ ] Publicar o projeto **Controle Financeiro** (PHP + MySQL)
-- [ ] Publicar o projeto **Gestor de Projetos e Convênios** (PHP + SQL)
-- [ ] Publicar a **Análise de Emendas Parlamentares** (Python + SQL)
