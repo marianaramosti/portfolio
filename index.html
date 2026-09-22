@@ -15,6 +15,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Efeitos: barra de progresso da rolagem e brilho que segue o mouse -->
+  <div class="progresso" id="progresso"></div>
+  <div class="brilho-mouse" id="brilhoMouse" aria-hidden="true"></div>
 
   <!-- ================= CABEÇALHO ================= -->
   <header class="topo" id="topo">
@@ -40,32 +43,34 @@
   <main>
     <!-- ================= APRESENTAÇÃO ================= -->
     <section class="hero container" id="inicio">
+      <!-- Rede de partículas animada no fundo (desenhada pelo script.js) -->
+      <canvas class="particulas" id="particulas" aria-hidden="true"></canvas>
       <div class="hero-texto">
-        <p class="hero-oi">👋 Olá, eu sou</p>
-        <h1>Mariana <span class="gradiente">Ramos</span></h1>
-        <p class="hero-digitando">
+        <p class="hero-oi entrada">👋 Olá, eu sou</p>
+        <h1 class="entrada">Mariana <span class="gradiente brilhante">Ramos</span></h1>
+        <p class="hero-digitando entrada">
           <span id="digitando"></span><span class="cursor">|</span>
         </p>
-        <p class="hero-descricao">
+        <p class="hero-descricao entrada">
           Tecnóloga em Análise e Desenvolvimento de Sistemas e administradora.
           Uno código e gestão para criar soluções que organizam processos e apoiam decisões.
         </p>
 
-        <div class="hero-botoes">
+        <div class="hero-botoes entrada">
           <!-- Só aparece se o arquivo curriculo.pdf existir no repositório (ver script.js) -->
           <a href="curriculo.pdf" class="botao botao-principal" id="botaoCV" download hidden>⬇ Baixar CV</a>
           <a href="#projetos" class="botao botao-principal" id="botaoProjetos">Ver projetos</a>
           <a href="#contato" class="botao botao-contorno">Fale comigo</a>
         </div>
 
-        <ul class="sociais" aria-label="Redes">
+        <ul class="sociais entrada" aria-label="Redes">
           <li><a href="https://github.com/marianaramosti" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a></li>
           <li><a href="https://www.linkedin.com/in/mariana-ramos-9b3014151/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
           <li><a href="mailto:marianaramos.ti@gmail.com" aria-label="E-mail">✉</a></li>
         </ul>
       </div>
 
-      <div class="hero-foto">
+      <div class="hero-foto entrada">
         <!-- Para usar sua foto: envie um arquivo chamado foto.jpg para o repositório -->
         <div class="avatar" id="avatar"><span>MR</span></div>
         <div class="selo selo-1">💻 Desenvolvimento Web</div>
@@ -82,6 +87,7 @@
     <section class="secao container" id="sobre">
       <p class="secao-pre">Conheça um pouco</p>
       <h2>Sobre <span class="gradiente">mim</span></h2>
+      <p class="secao-sub">Minha formação une gestão e tecnologia.</p>
 
       <div class="sobre-grade">
         <div class="sobre-texto">
@@ -111,9 +117,10 @@
     </section>
 
     <!-- ================= HABILIDADES ================= -->
-    <section class="secao container" id="habilidades">
+    <section class="secao secao-faixa container" id="habilidades">
       <p class="secao-pre">O que eu uso</p>
       <h2>Minhas <span class="gradiente">habilidades</span></h2>
+      <p class="secao-sub">Tecnologias e ferramentas que uso no dia a dia.</p>
 
       <div class="habilidades-grade">
         <article class="cartao">
@@ -148,6 +155,7 @@
     <section class="secao container" id="projetos">
       <p class="secao-pre">O que eu construí</p>
       <h2>Meus <span class="gradiente">projetos</span></h2>
+      <p class="secao-sub">Projetos publicados e em construção no meu GitHub.</p>
 
       <div class="filtros" role="group" aria-label="Filtrar projetos">
         <button class="filtro ativo" data-filtro="todos">Todos</button>
@@ -173,11 +181,14 @@
         <article class="projeto" data-categoria="web">
           <div class="projeto-capa capa-verde"><span>R$</span></div>
           <div class="projeto-corpo">
-            <span class="status andamento">Em desenvolvimento</span>
+            <span class="status pronto">Publicado</span>
             <h3>Controle Financeiro</h3>
-            <p>Sistema de contas a pagar e cobranças com login, cadastros, filtros e relatório mensal.</p>
-            <ul class="chips"><li>PHP</li><li>MySQL</li><li>JavaScript</li></ul>
-            <div class="projeto-links"><span class="em-breve">Em breve</span></div>
+            <p>Sistema web de contas a pagar e a receber com login, painel com gráficos, filtros e relatório mensal exportável.</p>
+            <ul class="chips"><li>PHP</li><li>MySQL</li><li>JavaScript</li><li>Chart.js</li></ul>
+            <div class="projeto-links">
+              <a href="https://github.com/marianaramosti/controle-financeiro" target="_blank" rel="noopener" class="botao-mini">GitHub</a>
+              <a href="https://mariana-financeiro.infinityfreeapp.com" target="_blank" rel="noopener" class="botao-mini botao-mini-cheio">Demo</a>
+            </div>
           </div>
         </article>
 
@@ -206,9 +217,10 @@
     </section>
 
     <!-- ================= SERVIÇOS ================= -->
-    <section class="secao container" id="servicos">
+    <section class="secao secao-faixa container" id="servicos">
       <p class="secao-pre">Como posso ajudar</p>
       <h2>O que eu <span class="gradiente">faço</span></h2>
+      <p class="secao-sub">Onde posso contribuir com a sua equipe.</p>
 
       <div class="servicos-grade">
         <article class="cartao servico">
@@ -238,6 +250,7 @@
     <section class="secao container" id="trajetoria">
       <p class="secao-pre">Minha caminhada</p>
       <h2>Minha <span class="gradiente">trajetória</span></h2>
+      <p class="secao-sub">Experiência profissional e formação acadêmica.</p>
 
       <div class="abas" role="tablist">
         <button class="aba ativa" data-aba="experiencia" role="tab">Experiência</button>
